@@ -1,4 +1,8 @@
-import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
+import {
+  ConflictException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { Interaction } from '@prisma/client';
 import { AgentsService } from '../agents/agents.service';
 import { PaginatedResult } from '../common/dto/pagination.dto';
@@ -39,7 +43,8 @@ export class InteractionsService {
       );
     }
 
-    const closedAt = dto.status === 'resolved' ? new Date() : interaction.closedAt;
+    const closedAt =
+      dto.status === 'resolved' ? new Date() : interaction.closedAt;
 
     return this.interactionsRepository.updateStatus(id, dto.status, closedAt);
   }

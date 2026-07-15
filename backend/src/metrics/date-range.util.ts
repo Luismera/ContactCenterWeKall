@@ -6,7 +6,11 @@ export interface UtcDateRange {
   endExclusive: Date;
 }
 
-function parseDateOnly(value: string): { year: number; monthIndex: number; day: number } {
+function parseDateOnly(value: string): {
+  year: number;
+  monthIndex: number;
+  day: number;
+} {
   const [year, month, day] = value.split('-').map(Number);
   return { year, monthIndex: month - 1, day };
 }
@@ -16,7 +20,10 @@ function parseDateOnly(value: string): { year: number; monthIndex: number; day: 
  * into a UTC instant range, so filtering respects the operation's timezone
  * instead of the server's.
  */
-export function bogotaDayRangeToUtc(dateFrom: string, dateTo: string): UtcDateRange {
+export function bogotaDayRangeToUtc(
+  dateFrom: string,
+  dateTo: string,
+): UtcDateRange {
   const from = parseDateOnly(dateFrom);
   const to = parseDateOnly(dateTo);
 

@@ -16,14 +16,20 @@ export class ListInteractionsQueryDto extends PaginationDto {
   @IsOptional()
   @IsDateString(
     {},
-    { message: 'dateFrom must be a valid ISO date (YYYY-MM-DD or full ISO datetime)' },
+    {
+      message:
+        'dateFrom must be a valid ISO date (YYYY-MM-DD or full ISO datetime)',
+    },
   )
   dateFrom?: string;
 
   @IsOptional()
   @IsDateString(
     {},
-    { message: 'dateTo must be a valid ISO date (YYYY-MM-DD or full ISO datetime)' },
+    {
+      message:
+        'dateTo must be a valid ISO date (YYYY-MM-DD or full ISO datetime)',
+    },
   )
   dateTo?: string;
 }

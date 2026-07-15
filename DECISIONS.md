@@ -2,7 +2,9 @@
 
 **Proyecto:** WeKall · Prueba técnica full-stack Node · **Autor:** Luis Mera (con apoyo de Claude Code, flujo SDD de DeltaByte) · **Última actualización:** 2026-07-15
 
-> Registro vivo: se inicia en la fase Plan y se actualiza durante toda la implementación. Razonamiento honesto, no marketing.
+> Este documento es la copia de entrega de `specs/001-panel-contact-center/decisions.md`,
+> que es el registro vivo mantenido durante todo el flujo de Spec-Driven Development
+> (Specify → Plan → Tasks → Implement). Ver esa carpeta para el spec y el plan completos.
 
 ## 1. Arquitectura general
 

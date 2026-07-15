@@ -63,9 +63,12 @@ export class MetricsService {
       agentName: row.agentName,
       total: row.total,
       resolved: row.resolved,
-      resolutionRate: row.total > 0 ? Number((row.resolved / row.total).toFixed(4)) : 0,
+      resolutionRate:
+        row.total > 0 ? Number((row.resolved / row.total).toFixed(4)) : 0,
       avgResolutionSeconds:
-        row.avgResolutionSeconds === null ? null : Math.round(row.avgResolutionSeconds),
+        row.avgResolutionSeconds === null
+          ? null
+          : Math.round(row.avgResolutionSeconds),
     }));
 
     const countsByDay = new Map<string, number>(

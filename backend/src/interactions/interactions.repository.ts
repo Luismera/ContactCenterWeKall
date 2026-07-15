@@ -1,5 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Interaction, InteractionStatus, InteractionType, Prisma } from '@prisma/client';
+import {
+  Interaction,
+  InteractionStatus,
+  InteractionType,
+  Prisma,
+} from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 
 export interface InteractionFilters {
@@ -13,7 +18,10 @@ export interface InteractionFilters {
 export class InteractionsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
-  create(data: { type: InteractionType; agentId: string }): Promise<Interaction> {
+  create(data: {
+    type: InteractionType;
+    agentId: string;
+  }): Promise<Interaction> {
     return this.prisma.interaction.create({ data });
   }
 
@@ -32,7 +40,9 @@ export class InteractionsRepository {
     });
   }
 
-  private buildWhere(filters: InteractionFilters): Prisma.InteractionWhereInput {
+  private buildWhere(
+    filters: InteractionFilters,
+  ): Prisma.InteractionWhereInput {
     const where: Prisma.InteractionWhereInput = {};
 
     if (filters.agentId) {

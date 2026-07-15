@@ -36,9 +36,9 @@
 
 ## Entregables
 
-- [ ] **T-90** Seed ejecutable documentado (`npm run seed`) `[FR-09]`
-- [ ] **T-91** README: instalación, cómo levantar (backend+frontend+DB), cómo probar, lista de endpoints
-- [ ] **T-92** `decisions.md` completo: actualizar §5 con decisiones tomadas durante implementación, completar §6 (uso de IA) con casos reales, revisar §7
+- [x] **T-90** Seed ejecutable documentado (`npm run seed`) `[FR-09]`
+- [x] **T-91** README: instalación, cómo levantar (backend+frontend+DB), cómo probar, lista de endpoints
+- [x] **T-92** `decisions.md` completo: actualizar §5 con decisiones tomadas durante implementación, completar §6 (uso de IA) con casos reales, revisar §7
 
 ## Plan de recorte (si el tiempo se acaba)
 
