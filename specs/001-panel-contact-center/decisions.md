@@ -41,6 +41,7 @@
 | 2026-07-14 | Sin autenticación/login | Login básico con JWT | Fuera de alcance del documento; confirmado por el usuario (2026-07-15) |
 | 2026-07-14 | Sin CRUD de agentes (solo seed + GET de lectura) | CRUD completo de agentes | El documento no lo pide; evita "funciones extra" que el documento penaliza; confirmado por el usuario (2026-07-15) |
 | 2026-07-14 | Transición de estado estricta y solo hacia adelante | Permitir saltos/retrocesos | Alinea con la cadena `abierta → en_progreso → resuelta` descrita literalmente en el documento; confirmado por el usuario (2026-07-15) |
+| 2026-07-15 | Prisma fijado en `6.19.3` (generador clásico `prisma-client-js`) en vez de la `7.8.0` que instala `npm install prisma` por defecto | Usar Prisma 7 (generador `prisma-client` + `prisma.config.ts`) | Prisma 7 es una major muy reciente con cambios de generador y configuración; para un entregable que debe "arrancar con pasos claros" se prioriza la versión 6.x, ampliamente documentada y estable, sobre la última disponible |
 
 ## 6. Uso de IA
 

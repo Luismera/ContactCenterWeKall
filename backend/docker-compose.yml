@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: wekall
+      POSTGRES_PASSWORD: wekall
+      POSTGRES_DB: contact_center
+    ports:
+      - "5432:5432"
+    volumes:
+      - contact_center_pg_data:/var/lib/postgresql/data
+
+volumes:
+  contact_center_pg_data:

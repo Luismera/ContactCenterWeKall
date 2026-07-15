@@ -5,11 +5,11 @@
 
 ## Milestone 1 — Proyecto base + modelo de datos + seed
 
-- [ ] **T-01** [S] Setup backend NestJS + TypeScript (estructura de módulos `interactions`, `metrics`, `agents`, `common`) `[Plan §1]`
-- [ ] **T-02** [S] Setup Prisma + PostgreSQL (docker-compose local), schema inicial `[Plan §3]`
-- [ ] **T-03** [M] Definir modelo `Agent`/`Interaction` en `schema.prisma` con enums `type`/`status` e índices (`agentId+openedAt`, `status`, `openedAt`) `[Plan §3]`
-- [ ] **T-04** [S] Migración inicial (`prisma migrate dev`) `[Plan §3]`
-- [ ] **T-05** [M] Script de seed: 5-8 agentes, 300-500 interacciones, mezcla de tipos/estados, timestamps que crucen medianoche COT `[FR-09]`
+- [x] **T-01** [S] Setup backend NestJS + TypeScript (estructura de módulos `interactions`, `metrics`, `agents`, `common`) `[Plan §1]`
+- [x] **T-02** [S] Setup Prisma + PostgreSQL (docker-compose local), schema inicial `[Plan §3]`
+- [x] **T-03** [M] Definir modelo `Agent`/`Interaction` en `schema.prisma` con enums `type`/`status` e índices (`agentId+openedAt`, `status`, `openedAt`) `[Plan §3]`
+- [x] **T-04** [S] Migración inicial (`prisma migrate dev`) `[Plan §3]`
+- [x] **T-05** [M] Script de seed: 5-8 agentes, 300-500 interacciones, mezcla de tipos/estados, timestamps que crucen medianoche COT `[FR-09]`
 
 ## Milestone 2 — API de interacciones (CRUD de lectura + ciclo de vida)
 

@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum InteractionType {
+  call
+  ticket
+}
+
+enum InteractionStatus {
+  open
+  in_progress
+  resolved
+}
+
+model Agent {
+  id           String        @id @default(uuid())
+  name         String
+  createdAt    DateTime      @default(now()) @db.Timestamptz(3)
+  interactions Interaction[]
+
+  @@map("agents")
+}
+
+model Interaction {
+  id        String            @id @default(uuid())
+  type      InteractionType
+  status    InteractionStatus @default(open)
+  agentId   String
+  agent     Agent             @relation(fields: [agentId], references: [id])
+  openedAt  DateTime          @default(now()) @db.Timestamptz(3)
+  closedAt  DateTime?         @db.Timestamptz(3)
+  createdAt DateTime          @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime          @updatedAt @db.Timestamptz(3)
+
+  @@index([agentId, openedAt])
+  @@index([status])
+  @@index([openedAt])
+  @@map("interactions")
+}
