@@ -1,6 +1,6 @@
 # Tasks 001 — Mini panel de Contact Center (Engage 360)
 
-**Fecha:** 2026-07-15 · **Estado:** aprobado (2026-07-15)
+**Fecha:** 2026-07-15 · **Estado:** completado (2026-07-15)
 **Plan:** `plan.md` (aprobado 2026-07-15)
 
 ## Milestone 1 — Proyecto base + modelo de datos + seed
