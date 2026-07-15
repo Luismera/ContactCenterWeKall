@@ -21,12 +21,12 @@
 
 ## Milestone 3 — Endpoint de métricas (núcleo)
 
-- [ ] **T-20** ⭐ [L] Query de agregación por agente (`$queryRaw`): total, resueltas, tasa de resolución, tiempo promedio de resolución — calculado en DB `[FR-04]`
-- [ ] **T-21** ⭐ [L] Query de serie de volumen por día con `date_trunc(... AT TIME ZONE 'America/Bogota')` `[FR-05]`
-- [ ] **T-22** ⭐ [M] Conversión de `dateFrom`/`dateTo` (fechas locales Bogotá) a límites UTC antes de consultar `[FR-05, NFR-02]`
-- [ ] **T-23** [S] `GET /metrics?dateFrom&dateTo` que combina T-20 + T-21 en una respuesta `[FR-04, FR-05]`
-- [ ] **T-24** ⭐ [M] Unit tests: cálculo de métricas + caso borde de cruce de medianoche COT `[NFR-01, NFR-02]`
-- [ ] **T-25** [S] Unit tests: máquina de estados (transiciones válidas/inválidas) `[FR-02]`
+- [x] **T-20** ⭐ [L] Query de agregación por agente (`$queryRaw`): total, resueltas, tasa de resolución, tiempo promedio de resolución — calculado en DB `[FR-04]`
+- [x] **T-21** ⭐ [L] Query de serie de volumen por día con `date_trunc(... AT TIME ZONE 'America/Bogota')` `[FR-05]`
+- [x] **T-22** ⭐ [M] Conversión de `dateFrom`/`dateTo` (fechas locales Bogotá) a límites UTC antes de consultar `[FR-05, NFR-02]`
+- [x] **T-23** [S] `GET /metrics?dateFrom&dateTo` que combina T-20 + T-21 en una respuesta `[FR-04, FR-05]`
+- [x] **T-24** ⭐ [M] Unit tests: cálculo de métricas + caso borde de cruce de medianoche COT `[NFR-01, NFR-02]`
+- [x] **T-25** [S] Unit tests: máquina de estados (transiciones válidas/inválidas) `[FR-02]`
 
 ## Milestone 4 — Frontend mínimo
 

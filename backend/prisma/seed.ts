@@ -1,9 +1,12 @@
-import { PrismaClient, InteractionType, InteractionStatus } from '@prisma/client';
-import { fromZonedTime } from 'date-fns-tz';
+import {
+  PrismaClient,
+  InteractionType,
+  InteractionStatus,
+} from '@prisma/client';
+import { bogotaLocalToUtc } from '../src/common/timezone.util';
 
 const prisma = new PrismaClient();
 
-const TIMEZONE = 'America/Bogota';
 const DAYS_OF_HISTORY = 45;
 const AGENT_NAMES = [
   'Camila Rojas',
@@ -20,20 +23,6 @@ function randomInt(min: number, max: number): number {
 
 function pick<T>(items: T[]): T {
   return items[randomInt(0, items.length - 1)];
-}
-
-/**
- * Builds a UTC Date instant from a Bogota (UTC-5, no DST) local wall-clock time.
- */
-function bogotaLocalToUtc(
-  year: number,
-  month: number,
-  day: number,
-  hour: number,
-  minute: number,
-): Date {
-  const localWallClock = new Date(year, month, day, hour, minute, 0);
-  return fromZonedTime(localWallClock, TIMEZONE);
 }
 
 async function main() {
