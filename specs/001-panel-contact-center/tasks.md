@@ -13,11 +13,11 @@
 
 ## Milestone 2 — API de interacciones (CRUD de lectura + ciclo de vida)
 
-- [ ] **T-10** [M] `POST /interactions` con DTO validado (`type`, `agentId`), 404 si agente no existe `[FR-01, FR-08]`
-- [ ] **T-11** ⭐ [M] `PATCH /interactions/:id/status` con máquina de estados estricta y solo hacia adelante (`abierta→en_progreso→resuelta`), 409 en transición inválida, registra `closedAt` al resolver `[FR-02]`
-- [ ] **T-12** [M] `GET /interactions` con filtros (`agentId`, `status`, `dateFrom`, `dateTo`) + paginación (`page`/`limit`) + metadata de paginación `[FR-03]`
-- [ ] **T-13** [S] `GET /agents` de solo lectura (para poblar filtros) `[FR-07]`
-- [ ] **T-14** [S] Exception filter global + formato estándar de error `[FR-08]`
+- [x] **T-10** [M] `POST /interactions` con DTO validado (`type`, `agentId`), 404 si agente no existe `[FR-01, FR-08]`
+- [x] **T-11** ⭐ [M] `PATCH /interactions/:id/status` con máquina de estados estricta y solo hacia adelante (`abierta→en_progreso→resuelta`), 409 en transición inválida, registra `closedAt` al resolver `[FR-02]`
+- [x] **T-12** [M] `GET /interactions` con filtros (`agentId`, `status`, `dateFrom`, `dateTo`) + paginación (`page`/`limit`) + metadata de paginación `[FR-03]`
+- [x] **T-13** [S] `GET /agents` de solo lectura (para poblar filtros) `[FR-07]`
+- [x] **T-14** [S] Exception filter global + formato estándar de error `[FR-08]`
 
 ## Milestone 3 — Endpoint de métricas (núcleo)
 
