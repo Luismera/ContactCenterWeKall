@@ -30,9 +30,9 @@
 
 ## Milestone 4 — Frontend mínimo
 
-- [ ] **T-30** [S] Setup React + TypeScript + Tailwind, cliente HTTP tipado `[Plan §2]`
-- [ ] **T-31** [M] Vista de listado de interacciones: tabla + filtros (agente, estado, rango fechas) + paginación, estados de carga/error `[FR-06]`
-- [ ] **T-32** [M] Vista de métricas: tabla por agente + gráfico simple de volumen por día, estados de carga/error `[FR-06]`
+- [x] **T-30** [S] Setup React + TypeScript + Tailwind, cliente HTTP tipado `[Plan §2]`
+- [x] **T-31** [M] Vista de listado de interacciones: tabla + filtros (agente, estado, rango fechas) + paginación, estados de carga/error `[FR-06]`
+- [x] **T-32** [M] Vista de métricas: tabla por agente + gráfico simple de volumen por día, estados de carga/error `[FR-06]`
 
 ## Entregables
 
