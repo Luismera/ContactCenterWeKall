@@ -34,6 +34,8 @@
 - Traer todo el rango a memoria y agrupar en JS — descartado explícitamente porque es la solución "frágil" que el propio documento señala como antipatrón.
 - Guardar un campo adicional `openedAtLocal` precalculado en el insert — descartado porque duplica la fuente de verdad (UTC) y puede desincronizarse si cambia la política de timezone; mejor derivarlo en la query.
 
+**Detalle que surgió al implementar — relleno de días sin datos:** la query SQL de volumen diario solo devuelve filas para días con al menos una interacción. Para que el frontend reciba una serie continua (sin huecos que rompan un gráfico de líneas/barras), el `MetricsService` completa los días faltantes con `count: 0`, iterando sobre el rango de fechas solicitado (acotado por el usuario, nunca por el volumen de datos — no reintroduce el antipatrón de recorrer registros en memoria). Verificado manualmente: la suma de `dailyVolume[].count` y la suma de `byAgent[].total` coinciden entre sí y con un `COUNT(*)` directo en `psql` para el mismo rango UTC (414 interacciones en ambos casos, rango 2026-06-01 a 2026-07-15).
+
 ## 5. Decisiones durante la implementación
 
 | Fecha | Decisión | Alternativa descartada | Trade-off |
