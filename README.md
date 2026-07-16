@@ -93,3 +93,4 @@ frontend/   React + Tailwind (listado de interacciones, dashboard de métricas)
 specs/      Spec-Driven Development: spec.md, plan.md, tasks.md
 DECISIONS.md   Documento de decisiones de diseño (entregable de la prueba)
 ```
+# ContactCenterWeKall
